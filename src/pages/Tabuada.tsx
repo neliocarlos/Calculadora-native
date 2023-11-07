@@ -31,16 +31,11 @@ const Tabuada = () => {
 
                 <View className="flex flex-col justify-center items-center">
                     <Text className='text-lg'>TABUADA do {inputValue}</Text>
-                    <InputMultiplier inputValue={inputValue} multiplier={1} />
-                    <InputMultiplier inputValue={inputValue} multiplier={2} />
-                    <InputMultiplier inputValue={inputValue} multiplier={3} />
-                    <InputMultiplier inputValue={inputValue} multiplier={4} />
-                    <InputMultiplier inputValue={inputValue} multiplier={5} />
-                    <InputMultiplier inputValue={inputValue} multiplier={6} />
-                    <InputMultiplier inputValue={inputValue} multiplier={7} />
-                    <InputMultiplier inputValue={inputValue} multiplier={8} />
-                    <InputMultiplier inputValue={inputValue} multiplier={9} />
-                    <InputMultiplier inputValue={inputValue} multiplier={10} />
+                    {
+                        for (let i = 1; i <= 10; i++) {
+                            <InputMultiplier inputValue={inputValue} multiplier={i} />
+                        }
+                    }
                 </View>
             </View>
             <TouchableOpacity 
